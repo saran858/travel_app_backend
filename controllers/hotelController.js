@@ -1,7 +1,7 @@
 const Hotel = require("../model/hotel.model")
 
 const getAllHotelHandler = async(req,res)=> {
-    const hotelCategory = req.query.hotelCategory
+    const hotelCategory = req.query.category
     try{
         let hotels
         if (hotelCategory){

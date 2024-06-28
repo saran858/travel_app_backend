@@ -1,4 +1,6 @@
 const express = require("express");
+const ServerlessHttp = require("serverless-http");
+
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
 
@@ -37,3 +39,12 @@ mongoose.connection.once("open", ()=> {
         console.log("Server is and Running")
     })
 })
+
+
+
+const handler = ServerlessHttp(app);
+module.exports.handler = async(event,context) => {
+    const result = await handler(event,context);
+    return result;
+}
+
