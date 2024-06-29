@@ -19,7 +19,7 @@ const connectDB = require("./config/dbconfig");
 const app = express();
 
 const corsOptions = {
-  origin: '*', // or your frontend domain
+  origin: "*", // or your frontend domain
   optionsSuccessStatus: 200 // For legacy browser support
 };
 
@@ -30,7 +30,7 @@ connectDB();
 const PORT = 3500;
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000'); // or your frontend domain
+  res.setHeader('Access-Control-Allow-Origin', '*'); // or your frontend domain
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
