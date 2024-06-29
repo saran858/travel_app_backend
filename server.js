@@ -19,7 +19,7 @@ const connectDB = require("./config/dbconfig");
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // or your frontend domain
+  origin: '*', // or your frontend domain
   optionsSuccessStatus: 200 // For legacy browser support
 };
 
